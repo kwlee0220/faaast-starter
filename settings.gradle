@@ -1,0 +1,13 @@
+rootProject.name = 'faaast-starter'
+
+include ':faaast'
+project(':faaast').projectDir = file('../faaast')
+
+include ":utils"
+project(':utils').projectDir = file('../../common/utils')
+include ":mdt.client"
+project(':mdt.client').projectDir = file('../../mdt/mdt.client')
+include ":mdt.faaast"
+project(':mdt.faaast').projectDir = file('../../mdt/mdt.faaast')
+include ":mdt.simulator"
+project(':mdt.simulator').projectDir = file('../../mdt/mdt.simulator')

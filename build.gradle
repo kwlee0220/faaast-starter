@@ -1,0 +1,74 @@
+plugins {
+	id 'application'
+	id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'de.fraunhofer.iosb.ilt.faaast'
+mainClassName = 'de.fraunhofer.iosb.ilt.faaast.service.starter.App'
+
+ext {
+	guava_version = '33.1.0-jre'
+
+	jackson_version = '2.17.2'
+	jsonpath_version = '2.9.0'
+	jakarta_xml_version = '4.0.2'
+	json_patch_version = '1.13'
+	bouncycastle_version = '1.77'
+	jsonassert_version = '1.5.1'
+	jena_version = '5.0.0'
+	rgxgen_version = '2.0'
+	fileupload_version = '1.5'
+	classgraph_version = '4.8.168'
+	jakarta_servlet_version = '6.0.0'
+	commons_lang3_version = '3.14.0'
+	httpclient5_version = '5.3.1'
+	jetty_version = '11.0.20'
+	parsson_version = '1.1.5'
+	commons_io_version = '2.15.1'
+	logback_version = '1.5.3'
+	picocli_version = '4.7.5'
+	systemstubs_version = '2.1.6'
+	minidev_version = '2.5.1'
+	
+	aas4j_version = '1.0.2'
+	
+	junit_version = '4.13.2'
+	mockito_version = '3.12.4'
+	slf4j_version = '2.0.12'
+}
+
+dependencies {
+	implementation project(':faaast:faaast-lib')
+	implementation project(":utils")
+	implementation project(':mdt-client')
+	implementation project(':mdt-faaast')
+
+	implementation "commons-io:commons-io:${commons_io_version}"
+	implementation "com.fasterxml.jackson.core:jackson-core:${jackson_version}"
+	implementation "com.fasterxml.jackson.core:jackson-databind:${jackson_version}"
+	implementation ("com.jayway.jsonpath:json-path:${jsonpath_version}") {
+		exclude group: "net.minidev", module: "json-smart"
+	}
+	implementation "info.picocli:picocli:${picocli_version}"
+	implementation "net.minidev:json-smart:${minidev_version}"
+	implementation "ch.qos.logback:logback-classic:${logback_version}"
+	implementation 'org.codehaus.janino:janino:3.1.12'
+
+	implementation ("org.eclipse.digitaltwin.aas4j:aas4j-model:${aas4j_version}") {
+		exclude group: "com.mycila", module: "license-maven-plugin"
+	}
+
+	testImplementation "org.mockito:mockito-core:${mockito_version}"
+	testImplementation "org.slf4j:slf4j-simple:${slf4j_version}"
+	testImplementation "ch.qos.logback:logback-core:${logback_version}"
+	testImplementation "uk.org.webcompere:system-stubs-core:${systemstubs_version}"
+}
+
+shadowJar {
+	zip64 true
+	mergeServiceFiles()
+	
+	exclude 'META-INF/*.SF'
+	exclude 'META-INF/*.DSA'
+	exclude 'META-INF/*.RSA'
+}

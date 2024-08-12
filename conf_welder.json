@@ -1,0 +1,18 @@
+{
+	"endpoints": [{
+		"@class": "de.fraunhofer.iosb.ilt.faaast.service.endpoint.http.HttpEndpoint",
+		"port": 14432
+	}],
+	"assetConnections": [{
+		"@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+		"clientId": "WelderAssetShell",
+		"serverUri": "tcp://localhost:1883",
+		"subscriptionProviders": {
+			"(Property)[ID_SHORT]Temperature": {
+				"format": "JSON",
+				"topic": "example/myTopic",
+				"query": "$.foo"
+			}
+		}
+	}]
+}

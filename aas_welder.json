@@ -1,0 +1,211 @@
+{
+  "assetAdministrationShells": [
+    {
+      "modelType": "AssetAdministrationShell",
+      "idShort": "Welder",
+      "id": "http://www.lg.co.kr/refrigerator/innercase/Welder",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": ""
+      },
+      "derivedFrom": {
+        "keys": []
+      },
+      "submodels": [
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "http://www.lg.co.kr/refrigerator/Innercase/Welder/InformationModel"
+            }
+          ],
+          "type": "ExternalReference"
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "http://www.lg.co.kr/refrigerator/Innercase/Welder/Data"
+            }
+          ],
+          "type": "ExternalReference"
+        }
+      ],
+      "administration": {
+        "revision": "",
+        "version": ""
+      },
+      "category": "CONSTANT"
+    }
+  ],
+  "conceptDescriptions": [],
+  "submodels": [
+    {
+      "modelType": "Submodel",
+      "idShort": "InformationModel",
+      "id": "http://www.lg.co.kr/refrigerator/Innercase/Welder/InformationModel",
+      "kind": "Instance",
+      "semanticId": {
+        "keys": []
+      },
+      "administration": {
+        "revision": "",
+        "version": ""
+      },
+      "category": "CONSTANT",
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "kind": "Instance",
+          "semanticId": {
+            "keys": []
+          },
+          "category": "",
+          "idShort": "MDTInfo",
+          "value": [
+            {
+              "modelType": "Property",
+              "value": "Welder",
+              "valueType": "STRING",
+              "category": "",
+              "idShort": "AssetName",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "자산이름"
+                }
+              ]
+            },
+            {
+              "modelType": "Property",
+              "value": "Machine",
+              "valueType": "STRING",
+              "category": "",
+              "idShort": "AssetType",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "트윈화대상자산타입(Machine,Process,Line,Factory)"
+                }
+              ]
+            },
+            {
+              "modelType": "Property",
+              "value": "Created",
+              "valueType": "STRING",
+              "category": "",
+              "idShort": "Status",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "MDT모델의현재상태(Created,Registered,Executed)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "idShort": "Data",
+      "id": "http://www.lg.co.kr/refrigerator/Innercase/Welder/Data",
+      "kind": "Instance",
+      "semanticId": {
+        "keys": []
+      },
+      "administration": {
+        "revision": "",
+        "version": ""
+      },
+      "category": "CONSTANT",
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "kind": "Instance",
+          "semanticId": {
+            "keys": []
+          },
+          "category": "",
+          "idShort": "SubModelInfo",
+          "value": [
+            {
+              "modelType": "Property",
+              "value": "Data",
+              "valueType": "STRING",
+              "category": "",
+              "idShort": "Title",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "서브모델이름"
+                }
+              ]
+            },
+            {
+              "modelType": "Property",
+              "value": "데이터서브모델",
+              "valueType": "STRING",
+              "category": "",
+              "idShort": "Description",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "서브모델에대한설명"
+                }
+              ]
+            },
+            {
+              "modelType": "Property",
+              "value": "KSX9101",
+              "valueType": "STRING",
+              "category": "",
+              "idShort": "Format",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "자원의물리적표현형식및디지털표현형식"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "kind": "Instance",
+          "semanticId": {
+            "keys": []
+          },
+          "category": "",
+          "idShort": "DataInfo",
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "kind": "Instance",
+              "semanticId": {
+                "keys": []
+              },
+              "category": "",
+              "idShort": "Properties",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "value": "0.0",
+                  "valueType": "STRING",
+                  "category": "Read",
+                  "idShort": "Current",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "설비전력"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
