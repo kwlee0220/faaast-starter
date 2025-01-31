@@ -1,6 +1,6 @@
 #! /bin/bash
 
-docker image rmi kwlee0220/mdt-client
+docker image rmi kwlee0220/faaast-starter
 
 cp ../build/libs/faaast-starter-1.0.0-0.9.1-all.jar faaast-starter-all.jar
 
