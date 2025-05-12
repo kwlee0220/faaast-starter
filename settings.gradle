@@ -9,3 +9,6 @@ include ':faaast-lib'
 project(':faaast-lib').projectDir = file('../faaast-lib')
 include ":mdt-faaast"
 project(':mdt-faaast').projectDir = file('../../mdt-faaast')
+
+include ':argo-java-client'
+project(':argo-java-client').projectDir = file('../../../misc/argo-java-client')

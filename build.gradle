@@ -6,13 +6,13 @@ plugins {
 }
 
 group = 'de.fraunhofer.iosb.ilt.faaast'
-version = '1.0.0-0.9.1'
+version = '1.0.0-1.0.0'
 mainClassName = 'de.fraunhofer.iosb.ilt.faaast.service.starter.App'
 
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 [compileJava,compileTestJava]*.options*.encoding = 'UTF-8'
@@ -28,6 +28,7 @@ dependencies {
 	implementation project(":utils")
 	implementation project(':mdt-client')
 	implementation project(':mdt-faaast')
+	implementation project(":argo-java-client")
 	
 	implementation 'org.apache.logging.log4j:log4j-core:2.24.1'
 
