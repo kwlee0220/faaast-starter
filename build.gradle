@@ -1,13 +1,13 @@
 plugins {
 	id 'java'
 	id 'eclipse'
-	id 'application'
-	id 'com.github.johnrengelman.shadow' version '8.1.1'
+	// id 'application'
+	// id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 group = 'de.fraunhofer.iosb.ilt.faaast'
 version = '1.0.0-1.0.0'
-mainClassName = 'de.fraunhofer.iosb.ilt.faaast.service.starter.App'
+// mainClassName = 'de.fraunhofer.iosb.ilt.faaast.service.starter.App'
 
 
 java {
@@ -24,11 +24,9 @@ repositories {
 	mavenCentral()
 }
 dependencies {
-	implementation project(':faaast-lib')
 	implementation project(":utils")
+	implementation project(':faaast-lib')
 	implementation project(':mdt-client')
-	implementation project(':mdt-faaast')
-	implementation project(":argo-java-client")
 	
 	implementation 'org.apache.logging.log4j:log4j-core:2.24.1'
 
@@ -47,14 +45,14 @@ dependencies {
 	implementation "org.codehaus.janino:janino:${janino_version}"
 }
 
-shadowJar {
-	zip64 true
-	mergeServiceFiles()
+// shadowJar {
+// 	zip64 true
+// 	mergeServiceFiles()
 	
-	exclude 'META-INF/*.SF'
-	exclude 'META-INF/*.DSA'
-	exclude 'META-INF/*.RSA'
-}
+// 	exclude 'META-INF/*.SF'
+// 	exclude 'META-INF/*.DSA'
+// 	exclude 'META-INF/*.RSA'
+// }
 
 eclipse {
 	classpath {
